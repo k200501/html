@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        nav {
+            width: 100%;
+            height: 55px;
+        }
+
+        .container {
+            width: 1600px;
+            height: 100%;
+            margin: auto;
+        }
+
+        /* navbar */
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .links {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-size: 14px;
+        }
+
+        nav .links .link {
+            margin: 0px 13px;
+            text-decoration: none;
+            color: black;
+        }
+
+        nav .links .logo {
+            background-image: url(./logo.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 120px;
+            height: 22px;
+            margin-left: 0px;
+        }
+
+        nav .options {
+            display: flex;
+
+            height: 100%;
+            font-size: 12px;
+
+        }
+
+        nav .options .option {
+            margin: 0px 20px;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        nav .options .option:last-child {
+            margin: 0px;
+        }
+
+        nav .options .option div {
+            width: 20px;
+            height: 20px;
+            background-position: center;
+            background-size: cover;
+            margin-left: 10px;
+        }
+
+        nav .options .all {
+            background-image: url(./下拉式箭頭.jpg);
+        }
+
+        nav .options .search {
+            background-image: url(./放大鏡.jpg);
+        }
+
+        nav .options .shopcar {
+            background-image: url(./購物車.jpg);
+        }
+
+        nav .options .user {
+            background-image: url(./登入.jpg);
+            width: 30px;
+            height: 30px;
+        }
+
+
+        .picture-box {
+            width: 100%;
+            height: 55%;
+            position: relative;
+        }
+
+        .text {
+            width: 88%;
+            margin: auto;
+
+
+
+        }
+
+        .textbar {
+            height: 139px;
+            display: flex;
+            /* align-items: center; */
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            top: calc(50% - 70px);
+            left: 6%;
+
+
+        }
+
+        .textbar .surface {
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+        }
+
+        .buying-box {
+            background-color: black;
+            height: 39px;
+            width: 123px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .buying {
+
+            text-decoration: none;
+            color: white;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .arrow {
+            background-image: url(./右箭.PNG);
+            width: 25px;
+            height: 36px;
+            float: left;
+            margin-top: 2px;
+        }
+
+        .block1 {
+            width: 100%;
+            height: 129px;
+            /* background-color: chartreuse; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 48px;
+            margin-bottom: 47px;
+
+        }
+
+        .block1 .choosebox {
+            width: 554px;
+            height: 114px;
+            /* background-color: red; */
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+
+        }
+
+        .block1 .choosebox .cb {
+            width: 184px;
+            height: 92px;
+            /* background-color: seashell; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 6px;
+
+
+
+
+        }
+
+        .block1 .choosebox #cb1 {
+            width: 184px;
+            height: 112px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .cb1-1 {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQDc?ver=30c2&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+
+        }
+
+        #cb1-text1 {
+            width: 125px;
+            height: 40px;
+            font-size: 15px;
+            align-items: center;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: -4px 21px 0px 22px;
+            text-align: center;
+
+
+
+        }
+
+        .block1 .choosebox #cb2 {
+            width: 184px;
+            height: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none;
+            color: black;
+        }
+
+        .cb2-1 {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4pndL?ver=5217&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+
+        }
+
+        .cb1-text2 {
+            width: 125px;
+            height: 20px;
+            font-size: 15px;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: -4px 21px 0px 22px;
+            margin: auto;
+
+        }
+
+        .block1 .choosebox #cb3 {
+            width: 184px;
+            height: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none;
+            color: black;
+        }
+
+        .cb3-1 {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4pkvE?ver=d8fc&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+
+        }
+
+        .salary {
+            width: 100%;
+            height: 410px;
+            /* background-color: yellowgreen; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .sa-box {
+            width: 25%;
+            height: 100%;
+            margin: 0 12px;
+            /* background-color: pink; */
+        }
+
+        #sa-box1 {
+            margin-left: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+
+        }
+
+        .sa1-pic {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4FTtq?ver=dae2&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 100%;
+            height: 50%;
+
+
+        }
+
+        .sa1-text1 {
+            text-decoration: none;
+            color: black;
+        }
+
+        .c-heading {
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+            color: black;
+            margin: 37px 0px 0px;
+            padding: 1px 12px 2px 0px;
+
+        }
+
+        #sa-box4 {
+            margin-right: 0px;
+        }
+
+        .text2,
+        #sa-box2 .sa2-text2,
+        #sa-box3 .sa3-text2,
+        #sa-box4 .sa4-text2 {
+            font-size: 15px;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0px;
+            text-decoration: none;
+            padding: 1px 12px 2px 0px;
+            color: black;
+
+        }
+
+        .sa-buying1 {
+            padding: 10px 3px 7px 0px;
+            display: flex;
+            width: 100px;
+            height: 40px;
+
+
+        }
+
+
+        .sa-buy-text {
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #0067b8;
+        }
+
+        .buy-now {
+            text-decoration: none;
+            color: #0067b8;
+        }
+
+        .buy-now:hover {
+            text-decoration: underline;
+            margin-right: 5px;
+        }
+
+        .sa-buy-arrow {
+            background-image: url(./blue-arrow.PNG);
+            margin: 3px 0px 0px 3px;
+            width: 12px;
+            height: 15px;
+        }
+
+        .sa2-pic {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4E4rR?ver=1daf&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 100%;
+            height: 50%;
+
+
+
+        }
+
+        .sa2-text1 {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sa2-buying1 {
+            display: flex;
+            padding: 10px 3px 7px 0px;
+
+        }
+
+        .sa-buy-left,
+        .sa-buy-right {
+            display: flex;
+        }
+
+        .sa-buy-left {
+            width: 160.75px;
+            height: 40px;
+        }
+
+        .sa-buy-right {
+            width: 128px;
+            height: 40px;
+        }
+
+        .sa3-pic {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4H9G0?ver=5bb0&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 100%;
+            height: 50%;
+            background-repeat: no-repeat;
+            background-position: cover;
+        }
+
+        .sa3-text1 {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sa3-buying1 {
+            display: flex;
+            width: 86px;
+            height: 40px;
+            padding: 10px 3px 7px 0px;
+        }
+
+        .sa4-pic {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4rzE2?ver=aa0b&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 100%;
+            height: 50%;
+            background-repeat: no-repeat;
+            background-position: cover;
+        }
+
+        .sa4-text1 {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sa4-buying1 {
+            display: flex;
+            width: 86px;
+            height: 40px;
+            padding: 10px 3px 7px 0px;
+        }
+
+        .ad-pic {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3hFDE?ver=e113&q=0&m=8&h=600&w=1600&b=%23FFFFFFFF&l=f&x=0&y=180&s=2120&d=795&aim=true);
+            width: 100%;
+            height: 60vh;
+
+        }
+
+        .ad-container {
+            /* background-color: red; */
+            width: 86%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .ad-textbar {
+            height: 23%;
+            width: 30%;
+            /* background-color: red; */
+
+        }
+
+        .block3 {
+            width: 100%;
+            height: 605px;
+            position: relative;
+
+        }
+
+        .b3-pic {
+            height: 60vh;
+            width: 100%;
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3hFDE?ver=e113&q=0&m=8&h=600&w=1600&b=%23FFFFFFFF&l=f&x=0&y=180&s=2120&d=795&aim=true);
+            margin: 48px 0px 0px;
+
+        }
+
+        .sa1-pic2 {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4HCqV?ver=5c59&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 100%;
+            height: 214px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .sa2-pic2 {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4E4rT?ver=2072&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 100%;
+            height: 214px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .sa3-pic2 {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4CFyx?ver=25c5&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&x=839&y=615&aim=true);
+            width: 100%;
+            height: 214px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .sa4-pic2 {
+            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWyG26?ver=8f21&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true);
+            width: 100%;
+            height: 214px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .block6 {
+            width: 100%;
+            height: 5vh;
+            margin: 48px 0 0;
+            /* background-color: red; */
+
+        }
+
+        .attention {
+            color: #00000099;
+
+            font-size: 15px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, .6);
+            padding-right: 12px;
+            margin-bottom: 4px;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            float: left;
+            margin: 0px 0px 4px;
+            padding: 0px 12px 0px 0px;
+
+        }
+
+        .atten-facebook {
+            width: 28px;
+            height: 28px;
+            background-image: url(https://www.microsoft.com/onerfstatics/marketingsites-eas-prod/_h/2532198d/coreui.statics/images/social/facebook.svg);
+            margin: 0px 14px 0px 0px;
+            float: left;
+        }
+
+        .atten-youtube {
+            width: 28px;
+            height: 28px;
+            background-image: url(https://www.microsoft.com/onerfstatics/marketingsites-eas-prod/_h/2d505657/coreui.statics/images/social/youtube.svg);
+            float: left;
+        }
+
+        footer {
+            width: 100%;
+            height: 40vh;
+            background: #f2f2f2;
+            margin-top: 48px;
+
+        }
+
+        .footer-top {
+            width: 100%;
+            height: 80%;
+            /* margin: auto; */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            /* background-color: greenyellow; */
+        }
+
+        .footer-top .top {
+            width: 16.66%;
+        }
+
+        .footer-top .top .heading {
+            color: #616161;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 36px 0 4px;
+            font-weight: 600;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .footer-top .top .li {
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding: 8px 0;
+            word-break: break-word;
+            color: #616161;
+            font-size: 11px;
+            line-height: 16px;
+
+        }
+
+        .footer-top .top .li .decor {
+            text-decoration: none;
+            color: #616161;
+        }
+
+        .footer-top .top .li .decor:hover {
+            text-decoration: underline;
+        }
+
+        footer .container .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .footer-bottom-left,
+        footer .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-size: 11px;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            height: 20%;
+
+            /* background-color: pink; */
+        }
+
+        .footer-bottom-left {
+
+            float: left;
+
+        }
+
+        .footer-bottom-left .earth {
+            width: 24px;
+            height: 24px;
+            background-image: url(./earth.PNG);
+            margin: 0px 10px 0px 0px;
+        }
+
+        .footer-bottom-left .chinese {
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding: 8px 0;
+            word-break: break-word;
+            color: #616161;
+            font-size: 11px;
+            line-height: 16px;
+
+        }
+
+        .footer-bottom-right {
+
+            float: right;
+
+
+        }
+
+        .footer-bottom-right .li {
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding: 0 24px 4px 0;
+            word-break: break-word;
+            color: #616161;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        .footer-bottom .decor {
+            text-decoration: none;
+            color: #616161;
+        }
+
+        .footer-bottom .decor:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="links">
+                <a href="" class="link logo"></a>
+                <a href="" class="link">Microsofr 365</a>
+                <a href="" class="link">Office</a>
+                <a href="" class="link">Windows</a>
+                <a href="" class="link">Surface</a>
+                <a href="" class="link">Xbox</a>
+                <a href="" class="link">支援</a>
+            </div>
+            <div class="options">
+                <a href="" class="option">所有 Microsoft
+                    <div class="all"></div>
+                </a>
+                <a href="" class="option">搜尋
+                    <div class="search"></div>
+                </a>
+                <a href="" class="option">購物車
+                    <div class="shopcar"></div>
+                </a>
+                <a href="" class="option">登入
+                    <div class="user"></div>
+                </a>
+
+
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="picture-box">
+                <picture>
+                    <source
+                        srcset="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4ntGe?ver=8414&amp;q=0&amp;m=8&amp;h=303&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;x=1091&amp;y=364&amp;s=822&amp;d=462&amp;aim=true"
+                        media="(max-width:539px)">
+
+                    <source
+                        srcset="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4ntGe?ver=8414&amp;q=0&amp;m=8&amp;h=431&amp;w=767&amp;b=%23FFFFFFFF&amp;l=f&amp;x=1093&amp;y=361&amp;s=834&amp;d=469&amp;aim=true"
+                        media="(min-width:540px) and (max-width:767px)">
+
+                    <source
+                        srcset="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4ntGe?ver=8414&amp;q=0&amp;m=8&amp;h=609&amp;w=1083&amp;b=%23FFFFFFFF&amp;l=f&amp;x=0&amp;y=0&amp;s=2116&amp;d=1190&amp;aim=true"
+                        media="(min-width:768px) and (max-width:1083px)">
+
+                    <source
+                        srcset="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4ntGe?ver=8414&amp;q=0&amp;m=8&amp;h=472&amp;w=1259&amp;b=%23FFFFFFFF&amp;l=f&amp;x=0&amp;y=199&amp;s=2120&amp;d=795&amp;aim=true"
+                        media="(min-width:1084px) and (max-width:1399px)">
+
+                    <source
+                        srcset="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4ntGe?ver=8414&amp;q=0&amp;m=8&amp;h=600&amp;w=1600&amp;b=%23FFFFFFFF&amp;l=f&amp;x=0&amp;y=213&amp;s=2120&amp;d=795&amp;aim=true"
+                        media="(min-width:1400px) and (max-width:1778px)">
+
+                    <source
+                        srcset="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4ntGe?ver=8414&amp;q=0&amp;m=8&amp;h=600&amp;w=1600&amp;b=%23FFFFFFFF&amp;l=f&amp;x=0&amp;y=213&amp;s=2120&amp;d=795&amp;aim=true">
+
+                    <img class="slider lazypreload" alt="全新的 Surface Pro 7 顯示山脈。"
+                        src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4ntGe?ver=8414&amp;q=0&amp;m=8&amp;h=600&amp;w=1600&amp;b=%23FFFFFFFF&amp;l=f&amp;x=0&amp;y=213&amp;s=2120&amp;d=795&amp;aim=true">
+                </picture>
+                <div class="text">
+                    <div class="textbar">
+                        <div class="surface">
+                            <h1 style="margin: 0;font-weight: 620;">Surface Laptop 3</h1>
+                        </div>
+                        <div class="chinese-word">
+                            <h5 style="margin: 0;font-size: 16px;">每天使用的完美筆記型電腦，速度比以往更快</h5>
+                        </div>
+                        <div class="buying-box">
+                            <a href="" class="buying">立即選購
+
+                            </a>
+                            <a href="" class="arrow"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="block1">
+
+                <div class="choosebox">
+                    <a href="" class="cb" id="cb1">
+                        <div class="cb1-1"></div>
+                        <div id="cb1-text1">選擇您的<br>Microsoft 365</div>
+                    </a>
+                    <a href="" class="cb" id="cb2">
+                        <div class="cb2-1"></div>
+                        <div class="cb1-text2">
+                            選購 Surface 裝置</div>
+                    </a>
+                    <a href="" class="cb" id="cb3">
+                        <div class="cb3-1"></div>
+                        <div class="cb1-text2">
+                            選購 Windows 10</div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="block2">
+                <div class="salary">
+                    <div class="sa-box" id="sa-box1">
+                        <div class="sa1-pic"></div>
+                        <a href="" class="sa1-text1">
+                            <h3 class="c-heading">Surface Laptop Go</h3>
+
+                        </a>
+                        <a href="" class="text2">運用時尚和效能兼具、最輕巧的 Surface 筆記型電腦，善加利用每一天。
+                        </a>
+                        <div class="sa-buying1">
+                            <div class="sa-buy-text">立即選購</div>
+                            <div class="sa-buy-arrow"></div>
+                        </div>
+                    </div>
+                    <div class="sa-box" id="sa-box2">
+                        <div class="sa2-pic"></div>
+                        <a href="" class="sa2-text1">
+                            <h3 class="c-heading">Microsoft 365</h3>
+                        </a>
+                        <a href="" class="sa2-text2">進階版 Office 應用程式、額外的雲端儲存空間、進階安全性等功能，全都在一個方便的訂閱中。</a>
+                        <div class="sa2-buying1">
+                            <div class="sa-buy-left">
+                                <div class="sa-buy-text">最多可供 6 人使用</div>
+                                <div class="sa-buy-arrow"></div>
+                            </div>
+                            <div class="sa-buy-right">
+                                <div class="sa-buy-text">適合 1 人使用</div>
+                                <div class="sa-buy-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sa-box" id="sa-box3">
+                        <div class="sa3-pic"></div>
+                        <div class="sa3-text1">
+                            <h3 class="c-heading">Xbox Game Pass Ultimate</h3>
+                        </div>
+                        <div class="sa3-text2">Xbox Live Gold 和超過 100 款高品質的主機遊戲和電腦遊戲。 與好友同樂，並探索下一個最愛遊戲。</div>
+                        <div class="sa3-buying1">
+                            <div class="sa-buy-text">立即加入</div>
+                            <div class="sa-buy-arrow"></div>
+                        </div>
+                    </div>
+                    <div class="sa-box" id="sa-box4">
+                        <div class="sa4-pic"></div>
+                        <div class="sa4-text1">
+                            <h3 class="c-heading">Microsoft Edge</h3>
+                        </div>
+                        <div class="sa4-text2">在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值。</div>
+                        <div class="sa4-buying1">
+                            <div class="sa-buy-text">立即下載</div>
+                            <div class="sa-buy-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block3">
+                <div class="b3-pic">
+
+                </div>
+                <div class="text">
+                    <div class="textbar">
+                        <div class="surface">
+                            <h1 style="margin: 0;font-weight: 620;">Microsoft OneDrive</h1>
+                        </div>
+                        <div class="chinese-word">
+                            <h5 style="margin: 0;font-size: 16px;">將檔案和相片儲存到 OneDrive，即可隨時隨地從任何裝置存取</h5>
+                        </div>
+                        <div class="buying-box">
+                            <a href="" class="buying">深入瞭解
+
+                            </a>
+                            <a href="" class="arrow"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="block4">
+                <div class="b4-text">
+                    <h2>適用於商務
+                    </h2>
+                </div>
+            </div>
+            <div class="block5">
+                <div class="salary">
+                    <div class="sa-box" id="sa-box1">
+                        <div class="sa1-pic2"></div>
+                        <a href="" class="sa1-text1">
+                            <h3 class="c-heading">適用於商務的 Surface</h3>
+
+                        </a>
+                        <a href="" class="text2">無論從事哪種工作，都有一款有助於成功的 Surface。
+                        </a>
+                        <div class="sa-buying1">
+                            <div class="sa-buy-text"><a href="" class="buy-now">立即選購</a></div>
+                            <div class="sa-buy-arrow"></div>
+                        </div>
+                    </div>
+                    <div class="sa-box" id="sa-box2">
+                        <div class="sa2-pic2"></div>
+                        <a href="" class="sa2-text1">
+                            <h3 class="c-heading">Microsoft 365 商務版</h3>
+                        </a>
+                        <a href="" class="sa2-text2">透過功能強大的應用程式提高生產力、聯繫和安全，始終領先一步。</a>
+                        <div class="sa2-buying1">
+                            <div class="sa-buy-left">
+                                <div class="sa-buy-text"><a href="" class="buy-now"></a>立即選購</a></div>
+                                <div class="sa-buy-arrow"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sa-box" id="sa-box3">
+                        <div class="sa3-pic2"></div>
+                        <div class="sa3-text1">
+                            <h3 class="c-heading">Microsoft Teams</h3>
+                        </div>
+                        <div class="sa3-text2">聊天、開會、通話和共同作業。</div>
+                        <div class="sa3-buying1">
+                            <div class="sa-buy-text">深入瞭解</div>
+                            <div class="sa-buy-arrow"></div>
+                        </div>
+                    </div>
+                    <div class="sa-box" id="sa-box4">
+                        <div class="sa4-pic2"></div>
+                        <div class="sa4-text1">
+                            <h3 class="c-heading">Microsoft Viva 簡介</h3>
+                        </div>
+                        <div class="sa4-text2">探索新的員工體驗平台，其設計旨在讓人員在工作時聯繫、專注、學習和成長。</div>
+                        <div class="sa4-buying1">
+                            <div class="sa-buy-text">深入瞭解</div>
+                            <div class="sa-buy-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block6">
+                <span class="attention">關注 Microsoft</span>
+                <div class="atten-facebook"></div>
+                <div class="atten-youtube"></div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="top">
+                    <div class="heading">最新動向</div>
+                    <div class="li"><a href="" class="decor">365</a></div>
+                    <div class="li"><a href="" class="decor">Surface Go</a></div>
+                    <div class="li"><a href="" class="decor">Surface Book 2</a></div>
+                    <div class="li"><a href="" class="decor">Surface Pro</a></div>
+                    <div class="li"><a href="" class="decor">Windows 10 應用程式</a></div>
+                </div>
+                <div class="top">
+                    <div class="heading">Microsoft Store</div>
+                    <div class="li"><a href="" class="decor">帳戶設定檔</a></div>
+                    <div class="li"><a href="" class="decor">下載中心</a></div>
+                    <div class="li"><a href="" class="decor">Microsoft Store 支援</a></div>
+                    <div class="li"><a href="" class="decor">退貨/退款</a></div>
+                    <div class="li"><a href="" class="decor">訂單追蹤</a></div>
+                </div>
+                <div class="top">
+                    <div class="heading">教育</div>
+                    <div class="li"><a href="" class="decor">Microsoft 在教育領域的應用</a></div>
+                    <div class="li"><a href="" class="decor">學生適用的 Office</a></div>
+                    <div class="li"><a href="" class="decor">學校適用的 Office 365</a></div>
+                    <div class="li"><a href="" class="decor">Microsoft Azure 在教育領域的應用</a></div>
+                </div>
+                <div class="top">
+                    <div class="heading">企業</div>
+                    <div class="li"><a href="" class="decor">Azure</a></div>
+                    <div class="li"><a href="" class="decor">AppSource</a></div>
+                    <div class="li"><a href="" class="decor">汽車</a></div>
+                    <div class="li"><a href="" class="decor">政府機構</a></div>
+                    <div class="li"><a href="" class="decor">醫療保險</a></div>
+                    <div class="li"><a href="" class="decor">製造</a></div>
+                    <div class="li"><a href="" class="decor">金融服務</a></div>
+                    <div class="li"><a href="" class="decor">零售</a></div>
+                </div>
+                <div class="top">
+                    <div class="heading">開發人員</div>
+                    <div class="li"><a href="" class="decor">Microsoft Visual Studio</a></div>
+                    <div class="li"><a href="" class="decor">Windows 開發人員中心</a></div>
+                    <div class="li"><a href="" class="decor">開發人員中心</a></div>
+                    <div class="li"><a href="" class="decor">Microsoft 開發人員計畫</a></div>
+                    <div class="li"><a href="" class="decor">Channel 9</a></div>
+                </div>
+                <div class="top">
+                    <div class="heading">公司</div>
+                    <div class="li"><a href="" class="decor">人才招募</a></div>
+                    <div class="li"><a href="" class="decor">公司新聞</a></div>
+                    <div class="li"><a href="" class="decor">Microsoft 隱私權</a></div>
+                    <div class="li"><a href="" class="decor">投資者</a></div>
+                    <div class="li"><a href="" class="decor">安全性</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <a href="">
+                        <div class="earth"></div>
+                    </a>
+                    <div class="chinese"><a href="" class="decor">中文(台灣)</a></div>
+                </div>
+                <div class="footer-bottom-right">
+                    <div class="li"><a href="" class="decor">聯絡 Microsoft</a></div>
+                    <div class="li"><a href="" class="decor">隱私權</a></div>
+                    <div class="li"><a href="" class="decor">使用規定</a></div>
+                    <div class="li"><a href="" class="decor">商標</a></div>
+                    <div class="li"><a href="" class="decor">有關我們的訊息</a></div>
+                    <div class="li">
+                        <div class="cir-c"></div>
+                        <div class="li"><a href="" class="decor">Microsoft 2021</a></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="https://images.chinatimes.com/newsphoto/2021-01-19/656/20210119004698.jpg" alt="" id="pic1">
+
+    <script>
+        // https://mrmad.com.tw/wp-content/uploads/2021/01/pui-pui-guinea-pig.jpg
+        // https://images.chinatimes.com/newsphoto/2021-01-19/656/20210119004698.jpg
+        // document.getElementById("myImg").src = "hackanm.gif";
+
+        // if (box.classList.contains('checked')) {
+
+        //     box.classList.remove('checked')
+        // }
+
+        // else {
+        //     box.classList.add('checked')
+//         var obj = document.getElementById("imgId");
+//    var imgParent = obj.parentNode;//获取img的父对象
+//    imgParent.removeChild(obj);//通过img的父对象把它删除
+
+            var pic1 = document.querySelector('#pic1')
+            // var pic2 = pic1.parentNode;
+           
+            // var pic2 = document.write('<img src="https://mrmad.com.tw/wp-content/uploads/2021/01/pui-pui-guinea-pig.jpg">');
+
+
+            pic1.onclick = function () {
+                // pic1.src = 'https://mrmad.com.tw/wp-content/uploads/2021/01/pui-pui-guinea-pig.jpg'
+                if(pic1.src == 'https://images.chinatimes.com/newsphoto/2021-01-19/656/20210119004698.jpg'){
+                    pic1.src = 'https://mrmad.com.tw/wp-content/uploads/2021/01/pui-pui-guinea-pig.jpg'
+
+                }
+                else{
+                    pic1.src = 'https://images.chinatimes.com/newsphoto/2021-01-19/656/20210119004698.jpg'
+
+                }
+
+               
+
+                // if (document.getElementById('pic1').src = 'https://mrmad.com.tw/wp-content/uploads/2021/01/pui-pui-guinea-pig.jpg'){
+                //     pic1.remove()
+
+
+                    
+                // }
+                
+
+
+
+            }
+           
+    </script>
+</body>
+
+</html>

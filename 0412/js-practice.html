@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxx1{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    color: royalblue;
+    font-size: 9 0px;
+}
+
+.clicked{
+    width: 500px;
+    height: 500px;
+    background-color: springgreen;
+    color: tomato;
+}
+.box2{
+    width: 500px;height: 500px;
+    background-color: gray;
+
+}
+        
+    </style>
+    
+</head>
+<body>
+    <div class="boxx1">我的盒子</div>
+    <div class="box2"></div>
+
+    <script>
+
+        document.querySelector('.boxx1').innerHTML = "where are my words"
+
+        var box1=document.querySelector('.boxx1')
+        var box2=document.querySelector('.box2')
+        box1.onclick = function(){
+            console.log('Box is truning Blue')
+            box1.classList.add('clicked')
+        }
+        
+        box2.onclick = function(){
+            box1.classList.remove('clicked')
+        }
+        
+        
+
+        
+        // var $ = function( obj ){
+        //     return document.querySelector( obj );
+        // }
+        // $('.boxx1').addEventListener('click', function(){
+        //     $('boxx1').classList.add('clicked');
+        // }, false)
+        // $('.cloes-tag').addEventListener('click', function(){
+        //     $('boxx1').classList.remove('clicked');
+        // }, false)
+
+
+    </script>
+    
+</body>
+</html>

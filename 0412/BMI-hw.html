@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI計算機</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            background-color: cornsilk;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .gameCanvas {
+            width: 600px;
+            height: 400px;
+            background-color: rgb(160, 160, 160);
+            border: 5px solid gray;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .d-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .justify-content-around {
+            justify-content: space-around;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 900;
+            margin-right: 10px;
+            width: 150px;
+        }
+
+        input {
+            width: 400px;
+            height: 35px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 200px;
+            height: 50px;
+            background-color: ivory;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            font-weight: 900;
+            transition: .3s;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(26, 26, 24);
+            color: white;
+        }
+
+        .btn:active {
+            transition: .1s;
+            background-color: red;
+            color: white;
+        }
+
+        .resultCanvas {
+            width: 600px;
+            padding: 30px;
+            border: 5px solid gray;
+            border-radius: 10px;
+            opacity: 0;
+            transition: 0.5s;
+
+        }
+
+        .resultCanvas.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="gameCanvas">
+            <h1>BMI計算機</h1>
+            <div class="d-flex">
+                <span>請輸入身高(cm):</span><input id="height" type="text">
+            </div>
+            <div class="d-flex">
+                <span>請輸入體重(kg):</span><input id="weight" type="text">
+            </div>
+            <div class="d-flex justify-content-around w-100">
+                <div id="start_btn" class="btn">開始計算</div>
+                <div id="reset_btn" class="btn">重新計算</div>
+            </div>
+        </div>
+        <div class="resultCanvas">
+            <span>BMI值:</span><span id="result_BMI"></span><br>
+            <span>身體狀態:</span><span id="result_bodyStatus"></span><br>
+            <span>建議參考:</span><span id="result_suggest"></span><br>
+        </div>
+    </div>
+
+    <script>
+        var start_btn = document.querySelector("#start_btn")
+        var resultCanvas = document.querySelector(".resultCanvas")
+        var result_BMI = document.querySelector('#result_BMI')
+        var height = document.querySelector('#height')
+        var weight = document.querySelector('#weight')
+        var result_bodyStatus = document.querySelector('#result_bodyStatus')
+        var result_suggest = document.querySelector('#result_suggest')
+        var reset_btn = document.querySelector('#reset_btn')
+
+
+        // height.value = 500
+        // height_s = height.value/100
+
+        // console.log(height_s)
+
+
+
+        start_btn.onclick = function () {
+            resultCanvas.classList.add('active')
+
+
+            // Math.pow(height.value/100,2)
+            console.log(Math.pow(height.value / 100, 2))
+            
+            var BMI = weight.value / Math.pow(height.value / 100, 2)
+            console.log(BMI)
+            // var bmi = BMI.toFixed(2)
+            // console.log(bmi);
+            // result_BMI.innerHTML = BMI.toFixed(2)
+            if (height.value == '' || weight.value == ''||isNaN(weight.value)||isNaN(height.value)||height.value<0||weight.value<0) {
+                window.alert('給我填數字@@');
+                
+                result_bodyStatus.innerHTML = '別鬧了!'
+                result_suggest.innerHTML = '給我填數字@@'
+                result_BMI.value ==''
+                
+
+
+            }
+            else {
+
+                if (BMI < 18.5) {
+                    result_BMI.innerHTML = BMI.toFixed(2)
+                    result_bodyStatus.innerHTML = '我是瘦子'
+                    result_suggest.innerHTML = '多吃點五花肉和麥當勞'
+
+
+                }
+
+                else if (BMI < 24 && BMI >= 18.5) {
+                    result_BMI.innerHTML = BMI.toFixed(2)
+                    result_bodyStatus.innerHTML = '你是正常的唷'
+                    result_suggest.innerHTML = '邊吃肉的時候也要記得運動唷!'
+                }
+                else if (BMI < 27) {
+                    result_BMI.innerHTML = BMI.toFixed(2)
+                    result_bodyStatus.innerHTML = '你是個小胖子唷'
+                    result_suggest.innerHTML = '多運動，跑起來!'
+
+                }
+                else if (BMI < 30) {
+                    result_BMI.innerHTML = BMI.toFixed(2)
+                    result_bodyStatus.innerHTML = '你是個中胖子唷'
+                    result_suggest.innerHTML = '除了多運動外還要少吃零食唷!'
+
+                }
+                else if (BMI < 35) {
+                    result_BMI.innerHTML = BMI.toFixed(2)
+                    result_bodyStatus.innerHTML = '你是個大胖子唷'
+                    result_suggest.innerHTML = '還不快去運動!肥宅!!'
+
+                }
+                else {
+                    result_BMI.innerHTML = BMI.toFixed(2)
+                    result_bodyStatus.innerHTML = '胖子(嘆)!我就不說啥了'
+                    result_suggest.innerHTML = '要不要考慮抽脂^^'
+
+
+
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+        reset_btn.onclick = function () {
+            resultCanvas.classList.remove('active')
+            weight.value = ''
+            height.value = ''
+
+        }
+
+
+    </script>
+</body>
+
+</html>

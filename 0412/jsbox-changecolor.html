@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            font-size: 20px;
+            color: blue;
+            border-radius: 50%;
+
+        }
+        .checked{
+            background-color: seagreen;
+            color:black ;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">change color box</div>
+    
+
+    <script>
+        // 目標:可連續點擊變色
+
+        // who
+        var box = document.querySelector('.box1')
+
+        // when?
+        box.onclick = function(){
+
+            // what?
+
+            // 根據不同的狀況，要做出不同的行為的時候。就會需要判斷
+            // if   else
+            // if (condition){
+
+
+            // }
+            // else{
+
+
+            // }
+
+            if (box.classList.contains('checked')){
+
+                box.classList.remove('checked')
+            }
+
+            else{
+                box.classList.add('checked')
+
+
+            }
+
+            // box.classList.add('checked')
+
+            // box.classList.remove('checked')
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>

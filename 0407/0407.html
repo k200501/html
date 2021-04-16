@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #nav{
+            width: 300px;
+            height: 100vh;
+            background-color: gray;
+            float: left;
+        }
+        #main{
+            width: calc(100% - 300px);
+            height: 100vh;
+            background-color:green;
+            float: left;
+
+        }
+        .container{
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            /* background-color: yellow; */
+            /* padding:250px 0 0 0 ; */
+            
+        }
+        #main .container{
+            width: 880px;
+            /* background-color: red; */
+            position: relative;
+            
+        }
+        #nav .container{
+            padding-top: 120px;
+        }
+        .logo{
+            width: 200px;
+            height: 200px;
+            /* height: 20vh; */
+            background-color: tomato;
+            margin: 0 auto 50px auto;
+
+            background-image: url(./puipui.jfif);
+            background-size: cover;
+            
+            
+        }
+        .logo:hover{
+            background-image: url(./我覺得不行.jpg);
+        }
+        .btn-group{
+            width: 200px;
+            height: 260px;
+            /* background-color: pink; */
+            margin: auto;
+        }
+        .btn{
+            width: 100%;
+            height: 80px;
+            background-color: royalblue;
+            text-align: center;
+            font-size: 24px;
+            line-height: 80px;
+            color: yellow;
+            margin-bottom: 10px;
+            
+        }
+        
+        .image-group{
+            margin: auto;
+            width: 100%;
+            height: 500px;
+            position: absolute;
+            top: calc(50% - 250px);
+            background-color:black;
+            color:lightgreen;
+
+        }
+        .img{
+            background-color:unset;
+            width: 33%;
+            height: 100%;
+            float: left;
+            text-align: center;
+            line-height: 500px;
+            font-size: 72px;
+        }
+        .img:hover{
+            opacity: 0.7;
+            transition: 100s;
+            color:gold;
+            cursor: not-allowed;
+            transform: rotate(36000deg);
+            
+        }
+        #imgz:hover{
+            color: red;
+        }
+        #imgy{
+            margin: 0 0.5%;
+        }
+        #imgx{
+            background-color: teal;
+            background-image: url(./史萊姆流汗.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+
+        #imgy{
+            background-color: teal;
+            margin:0 0.5%;
+            background-image: url(./Tamama.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+        #imgz{
+            background-color: teal;
+
+            background-image: url(./大哥沒有輸.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        } 
+        #imgx:hover,#imgy:hover,#imgz:hover{
+            background-size: cover;
+            
+        }
+        /* small-pc */
+        @media(max-width:1280px){
+            #main .container{
+                width: 750px;
+            /* background-color: red; */
+            
+
+            }
+            #imgx{
+                width: 100%;
+                height: 50%;
+                line-height: 250px;
+            }
+            #imgy , #imgz{
+                width: calc(50% - 5px);
+                height: calc(50% - 10px);
+                /* margin: 0px; */
+                margin: 10px 10px 0 0;
+                line-height: 250px;
+            }
+            #imgz{
+                margin: 10px 0 0 0;
+            }
+            /* #imgy{
+                margin-right: 10px;
+
+            } 
+            #imgx{
+                width: 100%;
+                height: 49%;
+                clear: left;
+                margin: 0 0 2% 0;
+                
+            }
+            #imgy{
+                width: 49%;
+                height: 49%;
+                margin-right: 2%;
+            }
+            #imgz{
+                width: 49%;
+                height: 49%;
+            }
+
+        } */
+        /* tablet */
+        @media(max-width:1150px){
+            #main .container{
+                width: 100%;
+            }
+        }
+        @media(max-width:960px){
+            #nav{
+                width: 100%;
+                height: 120px;
+           
+
+            }
+             #main{
+                width: 100%;
+                height: unset;
+                /* 為了讓螢幕不符合的能閱讀，可以改用最小高度的方式 */
+                min-height: calc(100vh - 120px);
+                
+            }
+            #nav .container{
+                width: 90%;
+                padding: 10px 0;
+            }
+            #main .container{
+                width: 90%;
+                padding: calc( calc(100vh - 920px) / 2) 0;
+            }
+            .logo{
+                float: left;
+                width: 100px;
+                height: 100px;
+                margin: 0px;
+            }
+            .btn-group{
+                float: right;
+                height: 100px;
+                width: 400px;
+                padding: 0 0 0 10px;
+                
+                
+            }
+            .btn{
+                float: left;
+                height: 100px;
+                width: 120px;
+                margin: 0 0 0 10px;
+                line-height: 100px;
+                
+                
+            }
+            .image-group{
+                height: 800px;
+                /* top: calc(50% - 400px); */
+                position: static;
+               
+            }
+            .img{
+                line-height: 800px;
+
+            }
+            
+
+           
+
+        }
+        @media(max-width:576px){
+            #nav{
+                height: 80px;
+            }
+            #nav .container{
+                position: relative;
+            }
+            #main{
+                height: unset;
+            }
+            .logo{
+                float: left;
+                width: 60px;
+                height: 60px;
+                margin: 0px;
+                position: absolute;
+                top: calc(50% - 30px);
+                left: calc(50% - 30px);
+            }
+            .btn-group{
+                float: right;
+                position: absolute;
+                padding: 0px;
+                top: 0px;
+                left: 0px;
+                width: 110px;
+                height: 280px;
+                padding-top: 80px;
+                z-index: 1;
+                /* top: calc(50% + 25px); */
+                left: 0;
+                display: none;
+                
+            }
+            .menu-btn{
+                width: 50px;
+                height: 50px;
+                background-color: yellow;
+                position: absolute;
+                top: calc(50% - 25px);
+                left: 0;
+                
+            }
+            .menu-btn:hover + .btn-group{
+                display: block;
+            }
+            .btn-group .btn{
+                float: unset;
+                width: 100px;
+                height: 60px;
+                line-height: 60px;
+                margin: 0px;
+                margin-bottom: 5px;
+            }
+            .btn-group:hover{
+                display: block;
+            }
+            #main .container{
+                width: 100%;
+                padding: 0px;
+            }
+            #main .img{
+                width: 100%;
+                height: 300px;
+                margin: 0;
+            }
+            .image-group{
+                height: unset;
+                display: inline-block;
+            }
+            
+
+            
+                
+            }
+            
+
+            
+
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="container">
+            <div class="logo"></div>
+            <div class="menu-btn"></div>
+            <div class="btn-group">
+                <div class="btn"><a href="https://www.youtube.com/watch?v=gv8fwwHwqJQ"> 萌王</a></div>
+                <div class="btn"><a href="https://www.youtube.com/watch?v=HwrIdl6KK6c"> Keroro</a></div>
+                <div class="btn"><a href="https://www.youtube.com/watch?v=2irrLNWldyU"> 鬼滅之刃</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+            <div class="image-group">
+                <div id="imgx" class="img">史萊姆</div>
+                <div id="imgy" class="img">Kero</div>
+                <div id="imgz" class="img">大哥吃飯</div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

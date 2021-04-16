@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        #boxtop{
+            width: 100%;
+            height: 56px;
+            background-color: gray;
+            padding: 10px;
+            
+            
+        }
+        #boxtop2{
+            width: 100%;
+            height: 100%;
+            background-color:white;
+            position: relative;
+        }
+        #boxtl{
+            width: 360px;
+            height: 100%;
+            background-color: gold;
+            float: left;
+            margin: 0 10% 0 0;
+            position: relative;
+            
+
+        }
+        #boxtl1{
+            width: 36px;
+            height: 36px;
+            background-color: lightseagreen;
+            float: left;
+            border-radius: 50%;
+
+        }
+        #boxtl2{
+            width: calc(80% - 2.5px);
+            height: 100%;
+            background-color: lightseagreen;
+            float: left;
+            position: absolute;
+            top: 5px;
+        }
+        #search{
+            width: calc(80% - 2.5px);
+            height: calc(100% - 5px);
+            background-color: white;
+            float:left;
+            position: absolute;
+            top: 2.2px;
+            right: 30px;
+        }
+        #boxtm{
+            width: 650px;
+            height: 100%;
+            background-color: gold;
+            float: left;
+            position: absolute;
+            left: calc(50% - 325px);
+            padding: 5px;
+            
+        }
+        #boxtm1{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float: left; 
+            margin: 0 5px 0 0;  
+        }
+        #boxtm2{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float: left; 
+            margin: 0 5px 0 0;     
+        }
+        #boxtm3{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float: left;   
+            margin: 0 5px 0 0;
+        }
+        #boxtm4{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float: left;  
+            margin: 0 5px 0 0;
+        }
+        #boxtm5{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float:left;   
+        }
+        #boxtr{
+            width: 20%;
+            height: 100%;
+            background-color: gold;
+            float: right;
+            padding: 5px;
+        }
+        #boxtr1{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float: left; 
+            margin: 0 5px 0 0;  
+        }
+        #boxtr2{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float: left; 
+            margin: 0 5px 0 0;     
+        }
+        #boxtr3{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float: left;   
+            margin: 0 5px 0 0;
+        }
+        #boxtr4{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float: left;  
+            margin: 0 5px 0 0;
+        }
+        #boxtr5{
+            width: calc(20% - 4px);
+            height: 100%;
+            background-color: lightseagreen;
+            float:left;   
+        }
+        #boxpic{
+            width: 100%;
+            height: 500px;
+            background-color:white;
+            padding: 0 400px;
+            background: rgb(2,0,36);
+            background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 48%, rgba(0,212,255,1) 100%);
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        }
+        #pic1{
+            width: 1250px;
+            height: 100%;
+            background-color: darkgray;
+            margin: auto;
+            position: relative;
+            left: clac(50% - 625px);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            
+        }
+        #picpeo{
+            width: 150px;
+            height: 150px;
+            background-color: greenyellow;
+            float: left;
+            position: absolute;
+            left: calc(50% - 75px);
+            top: 400px;
+            border-radius: 50%;
+            
+        }
+        #picname{
+            width: 136px;
+            height: 36px;
+            background-color: greenyellow;
+            float: right;
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            }
+            #name1{
+                width: 100%;
+                height: 100px;
+                background-color: khaki;
+                padding: 12px 0;
+                position: relative;
+                top: 50px;
+            }
+            #name{
+                width: 1250px;
+                height: 38px;
+                background-color: mediumaquamarine;
+                position: relative;
+                left: calc(50% - 560px);
+                margin: 0 0 5px 0;
+                padding: 5px;
+            }
+            #namel{
+                width: calc(50% - 2.5px);
+                height: calc(100% - 2.5px);
+                background-color: mediumorchid;
+                float: left;
+                margin: 0 5px 0 0;
+            }
+            #namer{
+                width: calc(50% - 2.5px);
+                height: calc(100% - 2.5px);
+                background-color: mediumorchid;
+                float: left;
+            }
+            #view{
+                width: 1250px;
+                height: 38px;
+                background-color: mediumaquamarine;
+                position: relative;
+                left: calc(50% - 560px);
+
+
+            }
+            #boxbot{
+                width: 100%;
+                height: 100px;
+                background-color: olive;
+                position: relative;
+                top: 60px;
+                padding: 5px;
+
+            }
+            #boxbl{
+                width: calc(30% - 5px);
+                height: calc(100% - 10px);
+                background-color: orange;
+                position: absolute;
+                left: calc(50% - 560px);
+                float: left;
+                padding: 5px;
+            }
+            #boxbl1{
+                width: calc(14% - 4.3px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+
+            }
+            #boxbl2{
+                width: calc(14% - 4.3px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+
+            }
+            #boxbl3{
+                width: calc(14% - 4.3px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+
+            }
+            #boxbl4{
+                width: calc(15% - 4.3px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+
+            }
+            #boxbl5{
+                width: calc(14% - 4.3px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+
+            }
+            #boxbl6{
+                width: calc(14% - 4.3px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+
+            }
+            #boxbl7{
+                width: calc(14% - 4.3px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+
+            }
+
+            #boxbr{
+                width: calc(20% - 5px);
+                height: calc(100% - 10px);
+                background-color: orange;
+                float: left;
+                position: absolute;
+                right: calc(50% - 690px);
+                padding: 5px;
+                
+
+            }
+            #boxbr1{
+                width: calc(40% - 3.75px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+            }
+            #boxbr2{
+                width: calc(20% - 3.75px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+            }
+            #boxbr3{
+                width: calc(20% - 3.75px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+                margin: 0 5px 0 0;
+            }
+            #boxbr4{
+                width: calc(20% - 3.75px);
+                height: 100%;
+                background-color: gray;
+                float: left;
+            }
+    </style>
+</head>
+<body>
+    <div id="boxtop">
+        <div id="boxtop2">
+            <div id="boxtl">
+                <div id="boxtl1"></div>
+                <input type="text" name = "輸入框" id = "search">
+                <!-- <div id="boxtl2"></div> -->
+            </div>
+            <div id="boxtm">
+                <div id="boxtm1"></div>
+                <div id="boxtm2"></div>
+                <div id="boxtm3"></div>
+                <div id="boxtm4"></div>
+                <div id="boxtm5"></div>
+            </div>
+            <div id="boxtr">
+                <div id="boxtr1">
+                    <div id="person_id"></div>
+                    <div id="person_pic">林嘉陞</div>
+                </div>
+                <div id="boxtr2"></div>
+                <div id="boxtr3"></div>
+                <div id="boxtr4"></div>
+                <div id="boxtr5"></div>
+            </div>
+        </div>
+    </div>
+    <div id="boxpic">
+        <div id="pic1">
+            <div id="picpeo"></div>
+            <div id="picname"></div>
+        </div>
+    </div>
+    <div id="name1">
+        <div id="name">
+            <div id="namel"></div>
+            <div id="namer"></div>
+        </div>
+        <div id="view"></div>
+    </div>
+    <div id="boxbot">
+        <div id="boxbl">
+            <div id="boxbl1"></div>
+            <div id="boxbl2"></div>
+            <div id="boxbl3"></div>
+            <div id="boxbl4"></div>
+            <div id="boxbl5"></div>
+            <div id="boxbl6"></div>
+            <div id="boxbl7"></div>
+        </div>
+
+        <div id="boxbr">
+            <div id="boxbr1"></div>
+            <div id="boxbr2"></div>
+            <div id="boxbr3"></div>
+            <div id="boxbr4"></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
