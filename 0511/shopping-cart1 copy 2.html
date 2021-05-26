@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="py-5">
+            <div class="box mx-auto ">
+                <div class="w-full h-100 " style="padding: 2.5rem;">
+                    <div class="menu1 d-flex align-items-center justify-content-between mt-4 pt-4 border-top">
+                        <div class="right d-flex">
+                            <div class="left pr-4">
+                                <input type="button" class="minus" name="minus" value="-">
+                                <input type="text" class="quantity" name="quantity" data-quantity="1" value="1">
+                                <input type="button" class="plus" name="plus" value="+">
+                            </div>
+                            <div class="right  mr-4">
+                                <input type="text" class="price" name="price" data-price="10.50" value="10.50">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu2 d-flex align-items-center justify-content-between mt-4 pt-4 border-top">
+                        <div class="right d-flex">
+                            <div class="left pr-4">
+                                <input type="button" class="minus" name="minus" value="-">
+                                <input type="text" class="quantity" name="quantity" data-quantity="1" value="1">
+                                <input type="button" class="plus" name="plus" value="+">
+                            </div>
+                            <div class="right  mr-4">
+                                <input type="text" class="price" name="price" data-price="10.50" value="10.50">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu3 d-flex align-items-center justify-content-between mt-4 pt-4 border-top">
+                        <div class="right d-flex">
+                            <div class="left pr-4">
+                                <input type="button" class="minus" name="minus" value="-">
+                                <input type="text" class="quantity" name="quantity" data-quantity="1" value="1">
+                                <input type="button" class="plus" name="plus" value="+">
+                            </div>
+                            <div class="right  mr-4">
+                                <input type="text" class="price" name="price" data-price="10.50" value="10.50">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="total d-flex flex-column align-items-end mt-3 py-3 border-top">
+                        <div class="col-5 col-md-3  d-flex  justify-content-between align-items-center">
+                            <span>數量：</span>
+                            <span id="totalquantity"></span>
+                        </div>
+                        <div class=" col-5 col-md-3  d-flex  justify-content-between align-items-center">
+                            <span>小計：</span>
+                            <span id="subtotal"></span>
+                        </div>
+                        <div class="col-5 col-md-3  d-flex  justify-content-between align-items-center">
+                            <span>運費：</span>
+                            <span>$24.90</span>
+                        </div>
+                        <div class="col-5 col-md-3  d-flex  justify-content-between align-items-center">
+                            <span>總計：</span>
+                            <span id="totality"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        // 給名字(上面)
+        var minus = document.getElementsByName("minus")
+
+        var quantity = document.getElementsByName("quantity")
+
+        var plus = document.getElementsByName("plus")
+
+        var price = document.getElementsByName("price")
+        console.log(quantity);
+
+
+
+        // for初始
+        var a = 0;
+
+        for (let index = 0; index < quantity.length; index++) {
+            a += quantity[index].value * 1
+        }
+
+        document.getElementById("totalquantity").innerHTML = a;
+
+        var b = 0;
+
+        for (let index = 0; index < quantity.length; index++) {
+            b += Math.floor(price[index].value * quantity[index].value * 100) / 100
+        }
+
+        document.getElementById("subtotal").innerHTML = "$" + b;
+
+        var c = 0;
+
+        for (let index = 0; index < quantity.length; index++) {
+            c += Math.floor(price[index].value * quantity[index].value * 100) / 100;
+        }
+        
+
+        document.getElementById("totality").innerHTML = "$" + (c + 24.90);
+
+
+
+        // 點+-
+        function plus_increase(index) {
+            quantity[index].value = parseInt(quantity[index].value) + 1;
+            number();
+            minortotal();
+            sum();
+        }
+
+        function minus_decrease(index) {
+            if (quantity[index].value == 0) {
+                alert("");
+                return;
+            }
+            quantity[index].value = parseInt(quantity[index].value) - 1;
+            number();
+            minortotal();
+            sum();
+        }
+
+
+
+        // for計算
+        function number() {
+            let number = 0;
+            for (let index = 0; index < quantity.length; index++) {
+                number += parseInt(quantity[index].value);
+            }
+            document.getElementById("totalquantity").innerHTML = number;
+            return number;
+        }
+
+        function minortotal() {
+            let minortotal = 0;
+            for (let index = 0; index < quantity.length; index++) {
+                minortotal += Math.floor(price[index].value * quantity[index].value * 100) / 100;
+            }
+            document.getElementById("subtotal").innerHTML = "$" + minortotal;
+            return minortotal;
+        }
+
+        function sum() {
+            let sum = 0;
+            for (let index = 0; index < quantity.length; index++) {
+                sum += Math.floor(price[index].value * quantity[index].value * 100) / 100;
+            }
+            document.getElementById("totality").innerHTML = "$" + (sum + 24.90);
+            return sum;
+        }
+
+
+
+        // button 1, 2, 3
+        plus[0].onclick = function () {
+            plus_increase(0);
+        }
+        minus[0].onclick = function () {
+            minus_decrease(0);
+        }
+
+        plus[1].onclick = function () {
+            plus_increase(1);
+        }
+        minus[1].onclick = function () {
+            minus_decrease(1);
+        }
+
+        plus[2].onclick = function () {
+            plus_increase(2);
+        }
+        minus[2].onclick = function () {
+            minus_decrease(2);
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
